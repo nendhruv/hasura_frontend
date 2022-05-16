@@ -3,7 +3,7 @@ import authHeader from "./auth.header";
 
 class AssetDataService {
   update(data) {
-    return http.put(`/variables/update/`, data);
+    return http.put(`/variables/update/`, data, authHeader());
   }
 
   get(id) {

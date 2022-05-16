@@ -3,7 +3,7 @@ export default function authHeader() {
 
   if (user) {
     // for Node.js Express back-end
-    return { "x-access-token": user };
+    return { 'headers': {"x-access-token": user, 'is-authorised': true} };
   } else {
     return {};
   }
